@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><head>
+    <meta name="google-site-verification" content="9vIieCe-Qpd78QOmBl63rGtIVbhY6sYyuxX3j8XWBA4" />
+    <meta name="baidu-site-verification" content="LRrmH41lz7" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="">
+    
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <title>Blog终于建成啦！-Jing&#39;s Blog | Jing&#39;s Blog</title>
+
+    <link rel="canonical" href="/post/2018-08-25-create-github-pages/">
+
+    <link rel="stylesheet" href="css/iDisqus.min.css"/>
+	
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="css/syntax.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    
+    <script src="js/jquery.min.js"></script>
+    
+    
+    <script src="js/bootstrap.min.js"></script>
+    
+    
+    <script src="js/hux-blog.min.js"></script>
+</head>
+</head>
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jing&#39;s Blog</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="categories/tech">Tech</a>
+                    </li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header{
+        background-image: url('img/home.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                       
+                       <a class="tag" href="/tags/tech" title="tech">
+                           tech
+                        </a>
+                        
+                       <a class="tag" href="/tags/ssg" title="SSG">
+                           SSG
+                        </a>
+                        
+                    </div>
+                    <h1>Blog终于建成啦！</h1>
+                    <h2 class="subheading">Github pages 建站框架大比拼</h2>
+                    <span  class="meta">Posted by Jing on Saturday, August 25, 2018
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+		
+                <header>
+                <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+<ul>
+<li><a href="#序言">序言</a></li>
+<li><a href="#高级web框架">高级web框架</a>
+<ul>
+<li><a href="#wordpress">WordPress</a></li>
+<li><a href="#django">Django</a></li>
+</ul></li>
+<li><a href="#轻量级">轻量级</a>
+<ul>
+<li><a href="#jekyll-octopress">Jekyll / Octopress</a></li>
+<li><a href="#hexo">Hexo</a></li>
+<li><a href="#hugo">Hugo</a></li>
+</ul></li>
+<li><a href="#总结">总结</a></li>
+</ul>
+</nav>
+		
+		
+
+<h1 id="序言">序言</h1>
+
+<blockquote>
+<p>很久很久以前，在拜读阮一峰大师博客时，偶然发现了<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">用github pages搭建博客的介绍</a>，于是心中悄悄埋下了这样一颗种子。然鹅，一直忙啊忙啊没时间（我是不会承认自己的懒惰的），于是拖到了现在。至于为什么是现在，嗯，大概是最近鸡汤灌多了，突然就有了动力。 :P</p>
+</blockquote>
+
+<p>废话少说，切入正题。基本概念在阮大师博客中已经介绍了，这里不再赘述。不过现在已经很多年过去了，想必已经有了更多更好的框架选择。于是进行了一番简单的市场调研。</p>
+
+<h1 id="高级web框架">高级web框架</h1>
+
+<p>如果你想要一个功能强大完备的博客平台，可以绑定数据库，可以后台管理，那么以下可能适合你：</p>
+
+<h2 id="wordpress">WordPress</h2>
+
+<p>使用PHP开发的开源框架，可做CMS使用，功能强大，插件众多。</p>
+
+<h2 id="django">Django</h2>
+
+<p>使用Python开发的开源框架，详细介绍请戳<a href="https://developer.mozilla.org/zh-CN/docs/learn/Server-side/Django/Introduction">这里</a>.</p>
+
+<h1 id="轻量级">轻量级</h1>
+
+<p>如果你只想要简简单单写点博客，不需要啥高级功能，一个简单易用的静态站点生成器（Static Site Generator，简称SSG）是最佳选择：</p>
+
+<h2 id="jekyll-octopress">Jekyll / Octopress</h2>
+
+<p>Jekyll是最老牌的框架，流行度最高，网上的资源也最多，Octopress是Jekyll基础上的再封装。需要安装使用Ruby。Build速度很慢。</p>
+
+<h2 id="hexo">Hexo</h2>
+
+<p>用nodejs写的框架，优点是主题很漂亮，毕竟UI可是js的拿手好戏，插件也很多，速度比 Jekyll快很多，javascript爱好者的不二选择。缺点是依赖太多，升级会有很多坑。</p>
+
+<h2 id="hugo">Hugo</h2>
+
+<p>用golang写的框架，速度非常快，官方文档里说是在毫秒级。部署简单，不许要安装依赖，直接二进制文件运行。缺点是因为是较新的框架，插件资源相对略少。</p>
+
+<h1 id="总结">总结</h1>
+
+<p>如果你熟悉Ruby，选Jekyll，js爱好者就用Hexo，以上都不是，用Hugo。Hugo使用非常简单快速，如果你不是像我一样有主题选择困难症的话，学习基本的安装构建只要半小时就能搞定。懒人用它妥妥的。网上很多教程，我参考的是<a href="http://nanshu.wang/post/2015-01-31/">这篇</a>。</p>
+
+<p>心动不如行动，</p>
+
+<blockquote>
+<p>挤需要三分钟，里就会像我一样，爱上杰款游戏 :DDDD</p>
+</blockquote>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/post/hello-world/" data-toggle="tooltip" data-placement="top" title="An Example Post">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                     
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                    </div>
+                </section>
+
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+                    <li>
+                        <a href="mailto:jing.y.au@hotmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/jing.yuan.111">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/jingyuan-au">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Jing&#39;s Blog , 2018
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https'){
+       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
