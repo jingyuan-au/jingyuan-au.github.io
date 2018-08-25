@@ -20,14 +20,5 @@
       <description>序言 很久很久以前，在拜读阮一峰大师博客时，偶然发现了用github pages搭建博客的介绍，于是心中悄悄埋下了这样一颗种子。然鹅，一直忙啊忙</description>
     </item>
     
-    <item>
-      <title>An Example Post</title>
-      <link>/post/hello-world/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hello-world/</guid>
-      <description>第一条 Hello world! 第二条</description>
-    </item>
-    
   </channel>
 </rss>
