@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jing&#39;s Blog</title>
-    <link>/tags/</link>
+    <link>jingyuan-au.github.io/tags/</link>
     <description>Recent content in Tags on Jing&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="jingyuan-au.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SSG</title>
-      <link>/tags/ssg/</link>
+      <link>jingyuan-au.github.io/tags/ssg/</link>
       <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ssg/</guid>
+      <guid>jingyuan-au.github.io/tags/ssg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tech</title>
-      <link>/tags/tech/</link>
+      <link>jingyuan-au.github.io/tags/tech/</link>
       <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tech/</guid>
+      <guid>jingyuan-au.github.io/tags/tech/</guid>
       <description></description>
     </item>
     
